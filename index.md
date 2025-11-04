@@ -47,7 +47,7 @@ Python, SQL (PostgreSQL)
 
 ## Projects
 
-Here are a few selected projects. See all on the [Projects page](/projects).
+Here are a few selected projects. See all on the [Projects page]({{ site.baseurl }}/projects).
 
 ### Interactive Story Generator – Full-stack AI Storytelling Engine
 **Tech:** TypeScript, React, FastAPI, PostgreSQL, OpenAI, LangChain, SQLAlchemy, Vite  
@@ -57,7 +57,7 @@ Built an LLM-powered “choose your own adventure” engine: users provide a the
 - Recursive story-tree processing and async job queues.
 - LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/your-repo-here)  
+**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator)  
 **Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/)  
 <!-- If you have a Loom demo for this: -->
 <!-- **Video Demo:** [Loom](your-loom-link) -->
@@ -74,4 +74,4 @@ An AI-assisted crawler that clicks through Google Shopping results, opens sideba
 
 ---
 
-[View all projects →](/projects)
+[View all projects →]({{ site.baseurl }}/projects)

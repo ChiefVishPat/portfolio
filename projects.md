@@ -20,7 +20,7 @@ Built an LLM-powered “choose your own adventure” engine from scratch.
 - Recursive story-tree processing and async job queues to generate and store story branches.
 - LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/your-repo-here)  
+**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator)  
 **Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/)  
 
 ---
@@ -52,7 +52,7 @@ Built an AI agent that automates AP/AR inboxes in real time by classifying incom
 **Code:** [GitHub](https://github.com/ChiefVishPat/expense-policy-agent)  
 **Video Demo:** [Loom](https://www.loom.com/share/454f7f5716c94de4b64474612a10660d)
 
---
+---
 
 ## Intelligent Slack Agent for Document Processing & Summarization
 
