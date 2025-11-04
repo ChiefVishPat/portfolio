@@ -10,7 +10,7 @@ A few projects that represent how I like to build: practical, reliable, and focu
 
 ---
 
-## Interactive Story Generator – Full-stack AI Storytelling Engine
+## 🧠 Interactive Story Generator – Full-stack AI Storytelling Engine
 
 **Tech:** TypeScript, React, FastAPI, PostgreSQL, OpenAI, LangChain, SQLAlchemy, Vite  
 
@@ -20,12 +20,12 @@ Built an LLM-powered “choose your own adventure” engine from scratch.
 - Recursive story-tree processing and async job queues to generate and store story branches.
 - LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator)  
-**Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/)  
+**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator){:target="_blank" rel="noopener noreferrer"}  
+**Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/){:target="_blank" rel="noopener noreferrer"}  
 
 ---
 
-## Google Shopping Web Scraper using Crawl4AI
+## 🛒 Google Shopping Web Scraper using Crawl4AI
 
 **Tech:** Python, Crawl4AI, Playwright, Pydantic, OpenAI, uv  
 
@@ -33,8 +33,8 @@ Built an LLM-powered “choose your own adventure” engine from scratch.
 - GPT-generated CSS/JSON extraction schema cached to disk to minimize token usage.
 - Interactive CLI prompts for search terms, launches a headless browser, and saves JSON results to `scrapes/`.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/web_crawler)  
-**Video Demo:** [Loom](https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761)
+**Code:** [GitHub](https://github.com/ChiefVishPat/web_crawler){:target="_blank" rel="noopener noreferrer"}  
+**Video Demo:** [Loom](https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
@@ -49,12 +49,12 @@ Built an AI agent that automates AP/AR inboxes in real time by classifying incom
 - Created a modular architecture for plug-and-play business workflows (invoice lookup, promise-to-pay, validation checks).  
 - Demonstrated reliability across thousands of automated email actions.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/expense-policy-agent)  
-**Video Demo:** [Loom](https://www.loom.com/share/454f7f5716c94de4b64474612a10660d)
+**Code:** [GitHub](https://github.com/ChiefVishPat/expense-policy-chatbot){:target="_blank" rel="noopener noreferrer"}  
+**Video Demo:** [Loom](https://www.loom.com/share/454f7f5716c94de4b64474612a10660d){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-## Intelligent Slack Agent for Document Processing & Summarization
+## 💬 Intelligent Slack Agent for Document Processing & Summarization
 
 **Tech:** Python, Slack API, OpenAI GPT, GitHub API  
 
@@ -62,5 +62,5 @@ Built an AI agent that automates AP/AR inboxes in real time by classifying incom
 - Dynamic prompt switching to tailor summaries by team/context.
 - Async file handling and GitHub issue creation for follow-ups and collaboration.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/missing-contract-legal-agent)  
-**Video Demo:** [Loom](https://www.loom.com/share/c7ac32dee35e47cb89f2a810589b3284)
+**Code:** [GitHub](https://github.com/ChiefVishPat/missing-contract-legal-agent){:target="_blank" rel="noopener noreferrer"}  
+**Video Demo:** [Loom](https://www.loom.com/share/c7ac32dee35e47cb89f2a810589b3284){:target="_blank" rel="noopener noreferrer"}

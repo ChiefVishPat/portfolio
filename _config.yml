@@ -5,13 +5,8 @@ baseurl: "/portfolio"
 
 theme: jekyll-theme-minimal
 
+# Hide the ZIP/TAR download buttons from the default theme
+show_downloads: false
+
 github_username: ChiefVishPat
 linkedin_username: vishalpatel2003
-
-nav:
-  - name: About
-    link: /
-  - name: Projects
-    link: /projects
-  - name: Resume
-    link: /resume
