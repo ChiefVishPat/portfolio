@@ -1,0 +1,18 @@
+title: Vishal Patel
+description: Software Engineer – AI, Fintech, and Backend Systems
+url: "https://vishalpatel.github.io"
+
+theme: jekyll-theme-minimal
+
+# Optional: social links for footer/sidebar
+github_username: ChiefVishPat
+linkedin_username: vishalpatel2003
+
+# Navigation (for top links)
+nav:
+  - name: About
+    link: /
+  - name: Projects
+    link: /projects
+  - name: Resume
+    link: /resume
