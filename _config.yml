@@ -3,7 +3,7 @@ description: Software Engineer – AI, Fintech, and Backend Systems
 url: "https://chiefvishpat.github.io"
 baseurl: "/portfolio"
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-merlot
 
 # Hide the ZIP/TAR download buttons from the default theme
 show_downloads: false
