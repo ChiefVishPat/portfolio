@@ -1,10 +1,10 @@
-title: "Vishal Patel"
+title: Vishal Patel
+description: Software Engineer - AI, Fintech, and Software Solutions
 url: "https://chiefvishpat.github.io"
 baseurl: "/portfolio"
-markdown: kramdown
 
-# Hide the ZIP/TAR download buttons from the default theme
-show_downloads: false
+theme: jekyll-theme-minimal
 
 github_username: ChiefVishPat
 linkedin_username: vishalpatel2003
+show_downloads: false

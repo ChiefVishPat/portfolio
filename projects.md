@@ -6,7 +6,7 @@ permalink: /projects
 
 # Projects
 
-A few projects that represent how I like to build: practical, reliable, and focused on real workflows.
+A few projects that represent how I like to build: practical, reliable, and focused on real workflows. You can check out more on my [GitHub](https://github.com/ChiefVishPat?tab=repositories){:target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -47,7 +47,6 @@ Built an AI agent that automates AP/AR inboxes in real time by classifying incom
 - Designed a robust orchestration layer (LangGraph + PydanticAI) for multi-step intent detection and validation.  
 - Integrated Gmail API with Redis-backed queues for async message handling and error retries.  
 - Created a modular architecture for plug-and-play business workflows (invoice lookup, promise-to-pay, validation checks).  
-- Demonstrated reliability across thousands of automated email actions.
 
 **Code:** [GitHub](https://github.com/ChiefVishPat/expense-policy-chatbot){:target="_blank" rel="noopener noreferrer"}  
 **Video Demo:** [Loom](https://www.loom.com/share/454f7f5716c94de4b64474612a10660d){:target="_blank" rel="noopener noreferrer"}
