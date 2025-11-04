@@ -1,9 +1,7 @@
-title: Vishal Patel
-description: Software Engineer – AI, Fintech, and Backend Systems
+title: "Vishal Patel"
 url: "https://chiefvishpat.github.io"
 baseurl: "/portfolio"
-
-theme: jekyll-theme-merlot
+markdown: kramdown
 
 # Hide the ZIP/TAR download buttons from the default theme
 show_downloads: false
