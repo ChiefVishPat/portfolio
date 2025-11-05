@@ -4,62 +4,157 @@ title: Projects
 permalink: /projects
 ---
 
+<style>
+  /* Hide Minimal theme chrome so only our content shows */
+  header, footer, .view { display: none !important; }
+
+  /* Give us a wider canvas like the home page */
+  .wrapper { width: min(1200px, 96vw) !important; margin: 0 auto !important; }
+  .wrapper > section { width: 100% !important; float: none !important; padding: 0 !important; margin: 0 !important; border: 0 !important; }
+
+  .page-layout { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem; }
+  .page-left  { flex: 1 1 58%; min-width: 420px; }
+  .page-right { flex: 1 1 34%; min-width: 280px; }
+
+  .shadow-divider { height: 1px; border: 0; background: linear-gradient(to right, rgba(0,0,0,0.10), rgba(0,0,0,0.04), rgba(0,0,0,0.02), rgba(0,0,0,0)); box-shadow: 0 1px 2px rgba(0,0,0,0.06); margin: 1rem 0; }
+
+  /* Minimal navigation */
+  .simple-nav { display: flex; gap: .75rem; align-items: center; padding: .6rem .25rem; margin: .25rem 0 .75rem; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; background: #fff; z-index: 20; }
+  .simple-nav a { color: #374151; text-decoration: none; font-weight: 600; padding: .25rem .5rem; border-radius: 6px; }
+  .simple-nav a:hover { background: #f3f4f6; }
+  .simple-nav a[aria-current="page"] { color: #1f4ba0; }
+
+  /* Left column typography */
+  .page-left h1 { margin: 0 0 .75rem; }
+  .page-left h3 { margin: 1rem 0 .35rem; }
+  .page-left p  { margin: 0.25rem 0 0.5rem; }
+  .page-left ul { margin: 0.25rem 0 0.75rem 1.2rem; }
+  .page-left a { text-decoration: none; color: #1f4ba0; }
+  .page-left a:hover { text-decoration: underline; }
+
+  /* Repo list */
+  .repo-box { border: 1px solid #e1e4e8; border-radius: 6px; padding: 0.75rem 1rem; background: #fafbfc; max-height: 70vh; overflow-y: auto; }
+  .repo-item { margin-bottom: 0.45rem; }
+  .repo-item a { font-weight: 500; }
+  .repo-item span { color: #66727f; font-size: 0.9rem; }
+
+  @media (max-width: 980px) {
+    .page-layout { flex-direction: column; gap: 1.5rem; }
+    .page-left, .page-right { flex: 1 1 auto; max-width: 100%; }
+  }
+</style>
+
+<nav class="simple-nav">
+  <a href="{{ site.baseurl }}/">Home</a>
+  <a href="{{ site.baseurl }}/projects" aria-current="page">Projects</a>
+</nav>
+
+<div class="page-layout">
+<!-- LEFT: Featured projects -->
+<section class="page-left" markdown="1">
+
 # Projects
 
-A few projects that represent how I like to build: practical, reliable, and focused on real workflows. You can check out more on my [GitHub](https://github.com/ChiefVishPat?tab=repositories){:target="_blank" rel="noopener noreferrer"}.
+A few projects that represent how I like to build: practical, reliable, and focused on real-world workflows.
 
 ---
 
-## 🧠 Interactive Story Generator – Full-stack AI Storytelling Engine
+## Featured Projects
 
-**Tech:** TypeScript, React, FastAPI, PostgreSQL, OpenAI, LangChain, SQLAlchemy, Vite  
+### 🧾 Expense Policy Agent – AI-Powered Email Automation
 
-Built an LLM-powered “choose your own adventure” engine from scratch.
+**Tech:** Python, FastAPI, Slack API, OpenAI, LangChain/LangGraph, Pydantic  
 
-- Users input a theme and receive a playable branching narrative with multiple endings.
-- Recursive story-tree processing and async job queues to generate and store story branches.
-- LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.
-
-**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator){:target="_blank" rel="noopener noreferrer"}  
-**Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/){:target="_blank" rel="noopener noreferrer"}  
-
----
-
-## 🛒 Google Shopping Web Scraper using Crawl4AI
-
-**Tech:** Python, Crawl4AI, Playwright, Pydantic, OpenAI, uv  
-
-- AI-assisted crawler that traverses Google Shopping results and extracts structured product data.
-- GPT-generated CSS/JSON extraction schema cached to disk to minimize token usage.
-- Interactive CLI prompts for search terms, launches a headless browser, and saves JSON results to `scrapes/`.
-
-**Code:** [GitHub](https://github.com/ChiefVishPat/web_crawler){:target="_blank" rel="noopener noreferrer"}  
-**Video Demo:** [Loom](https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761){:target="_blank" rel="noopener noreferrer"}
-
----
-
-## 🧾 Expense Policy Agent – AI-Powered Email Automation
-
-**Tech:** Python, LangGraph, PydanticAI, FastAPI, Redis, Gmail API, OpenAI  
-
-Built an AI agent that automates AP/AR inboxes in real time by classifying incoming vendor and expense-related emails, fetching matching receipts or invoices, and drafting accurate replies.
-
-- Designed a robust orchestration layer (LangGraph + PydanticAI) for multi-step intent detection and validation.  
-- Integrated Gmail API with Redis-backed queues for async message handling and error retries.  
-- Created a modular architecture for plug-and-play business workflows (invoice lookup, promise-to-pay, validation checks).  
-
+- Parses natural-language expense requests into structured JSON with OpenAI.
+- Enforces policy (spend caps, categories, pre-approval thresholds) via a rules engine.
+- Routes out-of-policy requests to Finance for one-click approval/rejection with threaded Slack workflows.
 **Code:** [GitHub](https://github.com/ChiefVishPat/expense-policy-chatbot){:target="_blank" rel="noopener noreferrer"}  
 **Video Demo:** [Loom](https://www.loom.com/share/454f7f5716c94de4b64474612a10660d){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-## 💬 Intelligent Slack Agent for Document Processing & Summarization
+### 🧠 Interactive Story Generator – Full-stack AI Storytelling Engine
+
+**Tech:** TypeScript, React, FastAPI, PostgreSQL, OpenAI, LangChain, SQLAlchemy, Vite  
+
+- Built an LLM-powered “choose your own adventure” engine with multiple endings and shareable URLs.
+- Architected recursive story-tree processing, async job queues, and a LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.  
+**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator){:target="_blank" rel="noopener noreferrer"}  
+**Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/){:target="_blank" rel="noopener noreferrer"}
+
+---
+
+### 🛒 Google Shopping Web Scraper using Crawl4AI
+
+**Tech:** Python, Crawl4AI, Playwright, Pydantic, OpenAI, uv  
+
+- Clicks each Google Shopping result, opens the sidebar, and extracts product name, reviews, ratings, prices, and store links.
+- Generates the CSS/JSON extraction schema once with GPT‑4.1‑nano, caches it, and reuses it to minimize token usage.
+- Interactive CLI prompts for a query, launches a headless browser, and saves JSON results into a `scrapes/` directory.  
+**Code:** [GitHub](https://github.com/ChiefVishPat/web_crawler){:target="_blank" rel="noopener noreferrer"}  
+**Video Demo:** [Loom](https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761){:target="_blank" rel="noopener noreferrer"}
+
+---
+
+### 💬 Intelligent Slack Agent for Document Processing & Summarization
 
 **Tech:** Python, Slack API, OpenAI GPT, GitHub API  
 
-- Slack agent that ingests PDFs/DOCX/TXT, summarizes them with GPT, and posts readable summaries back to Slack.
-- Dynamic prompt switching to tailor summaries by team/context.
-- Async file handling and GitHub issue creation for follow-ups and collaboration.
-
+- Automates document intake by extracting and summarizing PDFs/DOCX/TXT with OpenAI GPT models.
+- Dynamic prompt switching tailors summaries to user context, improving accuracy and usefulness.
+- Async file handling and Slack messaging produce readable, well‑formatted summaries.
+- Auto‑creates GitHub issues for follow‑ups; modular design supports other ticketing systems.  
 **Code:** [GitHub](https://github.com/ChiefVishPat/missing-contract-legal-agent){:target="_blank" rel="noopener noreferrer"}  
 **Video Demo:** [Loom](https://www.loom.com/share/c7ac32dee35e47cb89f2a810589b3284){:target="_blank" rel="noopener noreferrer"}
+
+---
+
+### 🗣️ Pharmaceutical Voice AI Assistant
+
+**Tech:** Python, WebSockets, Asyncio, Deepgram, Twilio, OpenAI  
+
+- Real‑time voice pharmacy assistant that handles drug inquiries, orders, and tracking via natural phone conversations.
+- Bidirectional streaming pipeline between Twilio MediaStreams and Deepgram’s Agent API.
+- Intelligent barge‑in detection and schema‑validated function calls for accurate operations.  
+**Code:** [GitHub](https://github.com/ChiefVishPat/pharmacist-voice-assistant){:target="_blank" rel="noopener noreferrer"}
+
+</section>
+
+  <!-- RIGHT: Dynamic GitHub list -->
+  <aside class="page-right">
+    <h2>All Repositories</h2>
+    <div class="repo-box">
+      <div id="repo-list">Loading repositories...</div>
+    </div>
+  </aside>
+
+</div>
+
+<script>
+  (function() {
+    const username = "ChiefVishPat";
+    const container = document.getElementById("repo-list");
+    if (!container) return;
+
+    fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`)
+      .then(res => res.json())
+      .then(repos => {
+        container.innerHTML = "";
+        repos
+          .filter(r => !r.fork)
+          .forEach(r => {
+            const div = document.createElement("div");
+            div.className = "repo-item";
+            const desc = r.description ? `<span> – ${r.description}</span>` : "";
+            div.innerHTML = `<a href="${r.html_url}" target="_blank" rel="noopener noreferrer">${r.name}</a>${desc}`;
+            container.appendChild(div);
+          });
+      })
+      .catch(err => {
+        const div = document.createElement("div");
+        div.textContent = "Could not load repositories from GitHub.";
+        container.appendChild(div);
+        console.error(err);
+      });
+  })();
+</script>
