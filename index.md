@@ -161,6 +161,31 @@ title: Vishal Patel
   .tech-pill svg { width: calc(var(--tech-size) * 0.9); height: calc(var(--tech-size) * 0.9); display: inline-block; }
   .badge { font-size: 0.70rem; font-weight: 600; padding: 0.25rem 0.45rem; border-radius: 999px; background: #eef2f7; color: #334155; border: 1px solid #e5e7eb; }
 
+  .project-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .project-links a {
+    color: #1f4ba0;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .project-links a:hover,
+  .project-links a:focus {
+    text-decoration: underline;
+  }
+
   /* Faint shadow-like dividers */
   .shadow-divider {
     height: 1px;
@@ -269,11 +294,7 @@ title: Vishal Patel
   <section class="page-right" markdown="1">
 ## About Me
 
-I'm a software engineer focused on building reliable backend systems and
-AI-powered workflows for real-world finance and operations use cases. I
-specialize in backend engineering, but I’m open to all kinds of engineering roles
-because I’m an adaptable, determined builder who enjoys learning quickly and
-shipping impactful products.
+I’m a software engineer who enjoys building reliable systems and intelligent workflows that make real-world products more efficient and user-focused. Most of my experience has been in backend and AI-driven automation within fintech, but I’m always eager to learn across the stack and take on engineering challenges that deliver tangible impact.
 
 I am a **U.S. citizen and do not require visa sponsorship**.
 
@@ -315,7 +336,13 @@ Python, SQL (PostgreSQL)
 
 Here are a few selected projects. For the full list, see the Projects page or my GitHub.
 
-### Interactive Story Generator – Full-stack AI Storytelling Engine
+<div class="project-heading">
+  <h3>Interactive Story Generator – Full-stack AI Storytelling Engine</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/interactive-story-generator" target="_blank" rel="noopener noreferrer">Source Code</a>
+    <a href="https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/" target="_blank" rel="noopener noreferrer">Demo App</a>
+  </div>
+</div>
 **Tech:** TypeScript, React, FastAPI, PostgreSQL, OpenAI, LangChain, SQLAlchemy, Vite  
 
 Built an LLM-powered “choose your own adventure” engine: users provide a theme, and the system generates a branching narrative with multiple endings and shareable URLs.
@@ -323,12 +350,15 @@ Built an LLM-powered “choose your own adventure” engine: users provide a the
 - Recursive story-tree processing and async job queues.
 - LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator){:target="_blank" rel="noopener noreferrer"}  
-**Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/){:target="_blank" rel="noopener noreferrer"}
-
 ---
 
-### Google Shopping Web Scraper using Crawl4AI
+<div class="project-heading">
+  <h3>Google Shopping Web Scraper using Crawl4AI</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/web_crawler" target="_blank" rel="noopener noreferrer">Source Code</a>
+    <a href="https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761" target="_blank" rel="noopener noreferrer">Demo Video</a>
+  </div>
+</div>
 **Tech:** Python, Crawl4AI, Playwright, Pydantic, OpenAI, uv  
 
 Built an AI-assisted crawler for Google Shopping.
@@ -337,12 +367,14 @@ Built an AI-assisted crawler for Google Shopping.
 - Generates the CSS/JSON extraction schema once with GPT-4.1‑nano, caches it, and reuses it to cut token usage.
 - Provides an interactive CLI to prompt for a query, launch a headless browser, and save JSON output into a `scrapes/` directory.
 
-**Code:** [GitHub](https://github.com/ChiefVishPat/web_crawler){:target="_blank" rel="noopener noreferrer"}  
-**Video Demo:** [Loom](https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761){:target="_blank" rel="noopener noreferrer"}
-
 ---
 
-### Pharmaceutical Voice AI Assistant
+<div class="project-heading">
+  <h3>Pharmaceutical Voice AI Assistant</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/pharmacist-voice-assistant" target="_blank" rel="noopener noreferrer">Source Code</a>
+  </div>
+</div>
 **Tech:** Python, WebSockets, Asyncio, Deepgram, Twilio, OpenAI  
 
 Real-time voice pharmacy assistant that handles drug inquiries, orders, and tracking over natural phone conversations.
@@ -350,8 +382,6 @@ Real-time voice pharmacy assistant that handles drug inquiries, orders, and trac
 - Built a bidirectional streaming pipeline between Twilio MediaStreams and Deepgram’s Agent API.
 - Designed an LLM-driven function-calling system for operations like drug lookup, order placement, and tracking via schema-validated JSON.
 - Implemented intelligent barge-in handling so users can interrupt mid-sentence.
-
-**Code:** [GitHub](https://github.com/ChiefVishPat/pharmacist-voice-assistant){:target="_blank" rel="noopener noreferrer"}
 
 ---
 

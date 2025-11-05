@@ -32,6 +32,29 @@ permalink: /projects
   .page-left a { text-decoration: none; color: #1f4ba0; }
   .page-left a:hover { text-decoration: underline; }
 
+  .project-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .project-links a {
+    color: #1f4ba0;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .project-links a:hover,
+  .project-links a:focus { text-decoration: underline; }
+
   /* Repo list */
   .repo-box { border: 1px solid #e1e4e8; border-radius: 6px; padding: 0.75rem 1rem; background: #fafbfc; max-height: 70vh; overflow-y: auto; }
   .repo-item { margin-bottom: 0.45rem; }
@@ -61,62 +84,82 @@ A few projects that represent how I like to build: practical, reliable, and focu
 
 ## Featured Projects
 
-### 🧾 Expense Policy Agent – AI-Powered Email Automation
+<div class="project-heading">
+  <h3>🧾 Expense Policy Agent – AI-Powered Email Automation</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/expense-policy-chatbot" target="_blank" rel="noopener noreferrer">Source Code</a>
+    <a href="https://www.loom.com/share/454f7f5716c94de4b64474612a10660d" target="_blank" rel="noopener noreferrer">Demo Video</a>
+  </div>
+</div>
 
 **Tech:** Python, FastAPI, Slack API, OpenAI, LangChain/LangGraph, Pydantic  
 
 - Parses natural-language expense requests into structured JSON with OpenAI.
 - Enforces policy (spend caps, categories, pre-approval thresholds) via a rules engine.
 - Routes out-of-policy requests to Finance for one-click approval/rejection with threaded Slack workflows.
-**Code:** [GitHub](https://github.com/ChiefVishPat/expense-policy-chatbot){:target="_blank" rel="noopener noreferrer"}  
-**Video Demo:** [Loom](https://www.loom.com/share/454f7f5716c94de4b64474612a10660d){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-### 🧠 Interactive Story Generator – Full-stack AI Storytelling Engine
+<div class="project-heading">
+  <h3>🧠 Interactive Story Generator – Full-stack AI Storytelling Engine</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/interactive-story-generator" target="_blank" rel="noopener noreferrer">Source Code</a>
+    <a href="https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/" target="_blank" rel="noopener noreferrer">Demo App</a>
+  </div>
+</div>
 
 **Tech:** TypeScript, React, FastAPI, PostgreSQL, OpenAI, LangChain, SQLAlchemy, Vite  
 
 - Built an LLM-powered “choose your own adventure” engine with multiple endings and shareable URLs.
-- Architected recursive story-tree processing, async job queues, and a LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.  
-**Code:** [GitHub](https://github.com/ChiefVishPat/interactive-story-generator){:target="_blank" rel="noopener noreferrer"}  
-**Live Demo:** [App](https://dd4da2b8-8671-4d7c-9aa9-41425b5926a6.e1-us-east-azure.choreoapps.dev/){:target="_blank" rel="noopener noreferrer"}
+- Architected recursive story-tree processing, async job queues, and a LangChain + Pydantic pipeline to validate deeply nested JSON into structured DB rows.
 
 ---
 
-### 🛒 Google Shopping Web Scraper using Crawl4AI
+<div class="project-heading">
+  <h3>🛒 Google Shopping Web Scraper using Crawl4AI</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/web_crawler" target="_blank" rel="noopener noreferrer">Source Code</a>
+    <a href="https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761" target="_blank" rel="noopener noreferrer">Demo Video</a>
+  </div>
+</div>
 
 **Tech:** Python, Crawl4AI, Playwright, Pydantic, OpenAI, uv  
 
 - Clicks each Google Shopping result, opens the sidebar, and extracts product name, reviews, ratings, prices, and store links.
 - Generates the CSS/JSON extraction schema once with GPT‑4.1‑nano, caches it, and reuses it to minimize token usage.
-- Interactive CLI prompts for a query, launches a headless browser, and saves JSON results into a `scrapes/` directory.  
-**Code:** [GitHub](https://github.com/ChiefVishPat/web_crawler){:target="_blank" rel="noopener noreferrer"}  
-**Video Demo:** [Loom](https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761){:target="_blank" rel="noopener noreferrer"}
+- Interactive CLI prompts for a query, launches a headless browser, and saves JSON results into a `scrapes/` directory.
 
 ---
 
-### 💬 Intelligent Slack Agent for Document Processing & Summarization
+<div class="project-heading">
+  <h3>💬 Intelligent Slack Agent for Document Processing &amp; Summarization</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/missing-contract-legal-agent" target="_blank" rel="noopener noreferrer">Source Code</a>
+    <a href="https://www.loom.com/share/c7ac32dee35e47cb89f2a810589b3284" target="_blank" rel="noopener noreferrer">Demo Video</a>
+  </div>
+</div>
 
 **Tech:** Python, Slack API, OpenAI GPT, GitHub API  
 
 - Automates document intake by extracting and summarizing PDFs/DOCX/TXT with OpenAI GPT models.
 - Dynamic prompt switching tailors summaries to user context, improving accuracy and usefulness.
-- Async file handling and Slack messaging produce readable, well‑formatted summaries.
-- Auto‑creates GitHub issues for follow‑ups; modular design supports other ticketing systems.  
-**Code:** [GitHub](https://github.com/ChiefVishPat/missing-contract-legal-agent){:target="_blank" rel="noopener noreferrer"}  
-**Video Demo:** [Loom](https://www.loom.com/share/c7ac32dee35e47cb89f2a810589b3284){:target="_blank" rel="noopener noreferrer"}
+- Async file handling and Slack messaging produce readable, well-formatted summaries.
+- Auto-creates GitHub issues for follow-ups; modular design supports other ticketing systems.
 
 ---
 
-### 🗣️ Pharmaceutical Voice AI Assistant
+<div class="project-heading">
+  <h3>🗣️ Pharmaceutical Voice AI Assistant</h3>
+  <div class="project-links">
+    <a href="https://github.com/ChiefVishPat/pharmacist-voice-assistant" target="_blank" rel="noopener noreferrer">Source Code</a>
+  </div>
+</div>
 
 **Tech:** Python, WebSockets, Asyncio, Deepgram, Twilio, OpenAI  
 
-- Real‑time voice pharmacy assistant that handles drug inquiries, orders, and tracking via natural phone conversations.
+- Real-time voice pharmacy assistant that handles drug inquiries, orders, and tracking via natural phone conversations.
 - Bidirectional streaming pipeline between Twilio MediaStreams and Deepgram’s Agent API.
-- Intelligent barge‑in detection and schema‑validated function calls for accurate operations.  
-**Code:** [GitHub](https://github.com/ChiefVishPat/pharmacist-voice-assistant){:target="_blank" rel="noopener noreferrer"}
+- Intelligent barge-in detection and schema-validated function calls for accurate operations.
 
 </section>
 
