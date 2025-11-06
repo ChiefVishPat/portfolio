@@ -159,6 +159,7 @@ title: Vishal Patel
   .tech-pill { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.5rem; border-radius: 999px; background: #eef2f7; color: #334155; border: 1px solid #e5e7eb; line-height: 1; }
   .tech-pill i { font-size: var(--tech-size); line-height: 1; }
   .tech-pill svg { width: calc(var(--tech-size) * 0.9); height: calc(var(--tech-size) * 0.9); display: inline-block; }
+  .tech-pill img { width: calc(var(--tech-size) * 0.95); height: calc(var(--tech-size) * 0.95); display: inline-block; object-fit: contain; }
   .badge { font-size: 0.70rem; font-weight: 600; padding: 0.25rem 0.45rem; border-radius: 999px; background: #eef2f7; color: #334155; border: 1px solid #e5e7eb; }
 
   .project-heading {
@@ -185,6 +186,58 @@ title: Vishal Patel
   .project-links a:focus {
     text-decoration: underline;
   }
+
+  .open-modal { cursor: pointer; }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 100;
+  }
+
+  .modal-overlay.active { display: flex; }
+
+  .modal-content {
+    width: min(840px, 100%);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+    padding: 1.25rem;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #111827;
+  }
+
+  .modal-close:hover,
+  .modal-close:focus { color: #1f4ba0; }
+
+  .modal-body { margin-top: 1.5rem; }
+
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 0;
+  }
+
+  .modal-fallback { margin-top: 0.75rem; font-size: 0.9rem; }
 
   /* Faint shadow-like dividers */
   .shadow-divider {
@@ -271,19 +324,19 @@ title: Vishal Patel
       <span class="tech-pill" title="React"><i class="devicon-react-original colored" aria-hidden="true"></i><span>React</span></span>
       <span class="tech-pill" title="TypeScript"><i class="devicon-typescript-plain colored" aria-hidden="true"></i><span>TypeScript</span></span>
       <span class="tech-pill" title="LangGraph">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#10b981" d="M12 3a2 2 0 1 1-.001 3.999A2 2 0 0 1 12 3Zm7 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM9 19a2 2 0 1 1-4.001-.001A2 2 0 0 1 9 19Zm10 2a2 2 0 1 1-.001-3.999A2 2 0 0 1 19 21ZM7 18l5-4 4-3m0 0 2 4m-6-7 0 3" stroke="#10b981" stroke-width="1.5" fill="none"/></svg>
+        <img src="https://cdn.simpleicons.org/langgraph/2563eb" alt="LangGraph logo" />
         <span>LangGraph</span>
       </span>
       <span class="tech-pill" title="LangChain">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f97316" d="M7.5 7A3.5 3.5 0 0 1 11 10.5h2A5.5 5.5 0 1 0 7.5 16h2A3.5 3.5 0 1 1 7.5 7Z"/><path fill="#f97316" d="M16.5 17A3.5 3.5 0 0 1 13 13.5h-2A5.5 5.5 0 1 0 16.5 8h-2A3.5 3.5 0 1 1 16.5 17Z"/></svg>
+        <img src="https://cdn.simpleicons.org/langchain/00bf9a" alt="LangChain logo" />
         <span>LangChain</span>
       </span>
       <span class="tech-pill" title="PydanticAI">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#3b82f6" d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Zm5 2h6v2H9V9Zm0 4h6v2H9v-2Z"/></svg>
+        <img src="https://cdn.simpleicons.org/pydantic/0ea5e9" alt="Pydantic logo" />
         <span>PydanticAI</span>
       </span>
       <span class="tech-pill" title="OpenAI">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#111827" d="M12 2.25a3.75 3.75 0 0 1 3.65 2.92 3.75 3.75 0 0 1 4.74 4.74A3.75 3.75 0 0 1 19 18.83V19A5 5 0 0 1 9.72 20.9 3.75 3.75 0 0 1 4.6 14.17 3.75 3.75 0 0 1 6.35 6.8 3.75 3.75 0 0 1 12 2.25Z"/></svg>
+        <img src="https://cdn.simpleicons.org/openai/412991" alt="OpenAI logo" />
         <span>OpenAI</span>
       </span>
       <span class="tech-pill" title="Git"><i class="devicon-git-plain colored" aria-hidden="true"></i><span>Git</span></span>
@@ -356,7 +409,7 @@ Built an LLM-powered “choose your own adventure” engine: users provide a the
   <h3>Google Shopping Web Scraper using Crawl4AI</h3>
   <div class="project-links">
     <a href="https://github.com/ChiefVishPat/web_crawler" target="_blank" rel="noopener noreferrer">Source Code</a>
-    <a href="https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761" target="_blank" rel="noopener noreferrer">Demo Video</a>
+    <a href="#" class="open-modal" data-modal="loom-web-crawler-home">Demo Video</a>
   </div>
 </div>
 **Tech:** Python, Crawl4AI, Playwright, Pydantic, OpenAI, uv  
@@ -366,6 +419,22 @@ Built an AI-assisted crawler for Google Shopping.
 - Clicks each search result, opens the sidebar, and extracts product data (name, reviews, ratings, prices, store links).
 - Generates the CSS/JSON extraction schema once with GPT-4.1‑nano, caches it, and reuses it to cut token usage.
 - Provides an interactive CLI to prompt for a query, launch a headless browser, and save JSON output into a `scrapes/` directory.
+
+<div id="loom-web-crawler-home" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="loom-web-crawler-home-title">
+  <div class="modal-content">
+    <button class="modal-close" type="button" aria-label="Close">×</button>
+    <h4 id="loom-web-crawler-home-title">Google Shopping Web Scraper Demo</h4>
+    <div class="modal-body">
+      <div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;">
+        <iframe data-src="https://www.loom.com/embed/d87f88f6918a48b2b121e1afcc40b761" allowfullscreen></iframe>
+      </div>
+      <p class="modal-fallback">
+        Prefer a new tab?
+        <a href="https://www.loom.com/share/d87f88f6918a48b2b121e1afcc40b761" target="_blank" rel="noopener noreferrer">Watch on Loom</a>.
+      </p>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -390,3 +459,52 @@ Real-time voice pharmacy assistant that handles drug inquiries, orders, and trac
 
   </section>
 </div>
+
+<script>
+  (function() {
+    const modalTriggers = document.querySelectorAll('.open-modal');
+    const modals = document.querySelectorAll('.modal-overlay');
+
+    if (!modalTriggers.length || !modals.length) return;
+
+    function closeModal(modal) {
+      if (!modal) return;
+      modal.classList.remove('active');
+      const iframe = modal.querySelector('iframe');
+      if (iframe && iframe.src) {
+        iframe.dataset.src = iframe.src;
+        iframe.src = '';
+      }
+    }
+
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', event => {
+        event.preventDefault();
+        const id = trigger.getAttribute('data-modal');
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.add('active');
+          const iframe = modal.querySelector('iframe');
+          if (iframe && iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+            delete iframe.dataset.src;
+          }
+        }
+      });
+    });
+
+    modals.forEach(modal => {
+      modal.addEventListener('click', event => {
+        if (event.target === modal || event.target.classList.contains('modal-close')) {
+          closeModal(modal);
+        }
+      });
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        modals.forEach(closeModal);
+      }
+    });
+  })();
+</script>
